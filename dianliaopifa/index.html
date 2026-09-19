@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="电料批发市场-专业电气设备与五金配件一站式采购平台，提供电线电缆、配电箱、照明灯具、开关插座等工业及民用电料的批发报价与货源信息。">
+    <meta name="keywords" content="电料批发市场,电线电缆批发,配电箱厂家,五金电料,工业电气设备,电工材料">
+    <title>电料批发市场-工业电气设备与五金配件一站式采购平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f39c12;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: #555;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: #004494;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #003d80 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box {
+            background: #fff;
+            padding: 10px;
+            border-radius: 50px;
+            display: inline-flex;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            outline: none;
+            border-radius: 50px 0 0 50px;
+        }
+
+        .search-box button {
+            background: var(--secondary-color);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Category Grid */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            fill: var(--primary-color);
+        }
+
+        .category-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .category-card p {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* Featured Products */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: var(--primary-color);
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .price {
+            color: #d32f2f;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .price span {
+            font-size: 12px;
+            color: #999;
+            font-weight: normal;
+        }
+
+        .btn-sm {
+            padding: 6px 15px;
+            font-size: 13px;
+        }
+
+        /* Info Section */
+        .info-section {
+            background-color: var(--light-bg);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .info-content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .info-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .check-icon {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+
+            .search-box input {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .search-box button {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M7 2v11h3v9l7-12h-4l4-8z"></path>
+                </svg>
+                电料批发市场
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">电线电缆</a>
+                <a href="#">配电箱柜</a>
+                <a href="#">照明灯具</a>
+                <a href="#">开关插座</a>
+                <a href="#">电工工具</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">免费注册</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>一站式工业与民用电料采购平台</h1>
+                <p>汇聚全国优质电料供应商，提供电线电缆、配电设备、照明灯具及五金配件的批发报价。正品保障，价格透明，支持大批量采购。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索电线、配电箱、灯具等电料...">
+                    <button>立即搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>主营品类</h2>
+                    <p>严选品类，满足建筑工程与工业生产需求</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M2 12h20v2H2zm0-6h20v2H2zm0 12h20v2H2z"/>
+                        </svg>
+                        <h3>电线电缆</h3>
+                        <p>BV/BVR/RVV线缆、电力电缆、控制电缆</p>
+                    </div>
+                    <div class="category-card">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+                        </svg>
+                        <h3>配电箱柜</h3>
+                        <p>照明配电箱、动力配电箱、落地式配电柜</p>
+                    </div>
+                    <div class="category-card">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/>
+                        </svg>
+                        <h3>照明灯具</h3>
+                        <p>LED灯管、商业照明、户外投光灯、防爆灯</p>
+                    </div>
+                    <div class="category-card">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                        </svg>
+                        <h3>开关插座</h3>
+                        <p>86型开关、防雷开关、智能插座面板</p>
+                    </div>
+                    <div class="category-card">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                        </svg>
+                        <h3>电工工具</h3>
+                        <p>万用表、测电笔、压线钳、剥线钳套装</p>
+                    </div>
+                    <div class="category-card">
+                        <svg class="category-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
+                        <h3>桥架线管</h3>
+                        <p>金属桥架、PVC线管、JDG管、KBG管</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热销电料推荐</h2>
+                    <p>厂家直销，源头价格，质量保证</p>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/cable1/400/300" alt="国标铜芯电线">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">热销</span>
+                            <h3 class="product-title">国标BV铜芯电线 2.5平方 100米/卷</h3>
+                            <div class="product-meta">
+                                <div class="price">¥1,200<span>/卷</span></div>
+                                <a href="#" class="btn btn-outline btn-sm">询价</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/cable2/400/300" alt="工业照明灯具">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">新品</span>
+                            <h3 class="product-title">LED工矿灯 150W防爆投光灯</h3>
+                            <div class="product-meta">
+                                <div class="price">¥280<span>/个</span></div>
+                                <a href="#" class="btn btn-outline btn-sm">询价</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/cable3/400/300" alt="配电箱">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">批发</span>
+                            <h3 class="product-title">动力照明配电箱 XLL-04</h3>
+                            <div class="product-meta">
+                                <div class="price">¥850<span>/台</span></div>
+                                <a href="#" class="btn btn-outline btn-sm">询价</a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Product 4 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/cable4/400/300" alt="开关面板">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">高性价比</span>
+                            <h3 class="product-title">西门子/施耐德品牌开关面板套装</h3>
+                            <div class="product-meta">
+                                <div class="price">¥120<span>/套</span></div>
+                                <a href="#" class="btn btn-outline btn-sm">询价</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-image">
+                        <img src="https://picsum.photos/seed/factory/600/400" alt="现代化电料仓库" style="width:100%; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="info-content">
+                        <h2>为什么选择我们？</h2>
+                        <p>作为专业的电料批发市场平台，我们致力于为建筑商、装修公司及工厂提供高性价比的电气材料解决方案。我们拥有完善的供应链体系，确保每一件产品都符合国家质量标准。</p>
+                        <ul class="info-list">
+                            <li><span class="check-icon">✔</span> 品质严选，拒绝劣质产品</li>
+                            <li><span class="check-icon">✔</span> 仓库直发，减少中间环节</li>
+                            <li><span class="check-icon">✔</span> 支持定制与OEM代工服务</li>
+                            <li><span class="check-icon">✔</span> 全国物流配送，售后无忧</li>
+                        </ul>
+                        <div style="margin-top: 30px;">
+                            <a href="#" class="btn btn-primary">联系我们</a>
+                            <a href="#" class="btn btn-outline" style="margin-left: 10px;">查看资质</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>采购指南与常见问题</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                        <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">如何区分BV线与BVR线？</summary>
+                        <p style="margin-top: 10px; color: #666;">BV线为硬线，内芯为单根铜丝，韧性较差但导电性稳定；BVR线为软线，内芯由多股细铜丝绞合而成，柔韧性更好，安装更方便。</p>
+                    </details>
+                    <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                        <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">电料批发需要什么资质？</summary>
+                        <p style="margin-top: 10px; color: #666;">一般企业采购需要提供营业执照复印件、税务登记证及法人授权书。个人或小规模采购通常提供身份证即可，具体视供应商要求而定。</p>
+                    </details>
+                    <details style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                        <summary style="cursor: pointer; font-weight: bold; font-size: 16px;">发货时间一般是多久？</summary>
+                        <p style="margin-top: 10px; color: #666;">现货库存产品通常在付款后24小时内发货。非现货产品（如定制配电箱）需根据生产周期，一般在3-7个工作日内发货。</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>电料批发市场</h4>
+                    <p>专注电气材料领域十年，致力于打造最专业的B2B电料采购平台。连接工厂与终端，提供优质、安全、稳定的电气产品。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">产品中心</a></li>
+                        <li><a href="#">供应商入驻</a></li>
+                        <li><a href="#">新闻资讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">采购帮助</a></li>
+                        <li><a href="#">物流配送</a></li>
+                        <li><a href="#">售后政策</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：service@electro-market.com</li>
+                        <li>地址：中国·某省某市某区工业园A栋</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 电料批发市场 版权所有 | 仅供演示，不提供实际交易服务</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
