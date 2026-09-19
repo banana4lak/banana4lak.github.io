@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长白山怪兽-神秘传说、目击事件与科学考证全记录</title>
+    <meta name="description" content="长白山怪兽专题网站，汇集长白山天池怪兽的历代目击报告、目击者证言、相关民间传说以及地质学家的科学解释，为您深度解析这一神秘生物的真相。">
+    <meta name="keywords" content="长白山怪兽, 天池怪兽, 长白山天池, 神秘生物, 目击事件, 中国十大未解之谜">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --highlight-color: #f39c12;
+            --bg-color: #f4f6f7;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #7f8c8d;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/changbai/1920/800.jpg') center/cover no-repeat;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 3px solid var(--highlight-color);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            margin-bottom: 5rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            border-left: 2px solid #ddd;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 0;
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color: var(--card-bg);
+            border: 3px solid var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--highlight-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Evidence Grid */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            background-color: #ecf0f1;
+            color: var(--text-light);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .card-text {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Scientific View */
+        .scientific-view {
+            background-color: #e8f6f3;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .scientific-view h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .scientific-view p {
+            margin-bottom: 1rem;
+        }
+
+        .suggestion-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .suggestion-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-light);
+            background-color: #fafafa;
+        }
+
+        .faq-answer p {
+            padding: 1.5rem 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: var(--highlight-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                长白山怪兽<span>档案</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#timeline" class="active">目击时间线</a></li>
+                    <li><a href="#evidence">目击证据</a></li>
+                    <li><a href="#science">科学解析</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>探寻长白山天池怪兽</h1>
+        <p>从1950年代至今，长白山天池不断传出神秘生物目击事件。本站致力于整理目击报告、分析目击影像，并提供地质学与生物学界的科学视角。</p>
+        <a href="#timeline" class="btn">查看目击历史</a>
+    </section>
+
+    <main class="container">
+        
+        <!-- Key Stats -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">次目击记录</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">70+</div>
+                <div class="stat-label">年目击史</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">主要目击形态</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50%</div>
+                <div class="stat-label">未解之谜</div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="timeline-section">
+            <div class="section-title">
+                <h2>经典目击时间线</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">1951年</span>
+                    <div class="timeline-content">
+                        <h3>首次官方记录</h3>
+                        <p>驻军战士在清理火山灰时，发现一个长约2米、宽约1米的黑色怪物，随后被士兵开枪射击，但怪物沉入水中消失。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1962年</span>
+                    <div class="timeline-content">
+                        <h3>雷达目击事件</h3>
+                        <p>一架飞机在飞行过程中，雷达捕捉到天池水面有不明飞行物，飞行员称看到水面有巨大黑影在快速移动。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1980年</span>
+                    <div class="timeline-content">
+                        <h3>多次目击潮</h3>
+                        <p>当年7月至8月间，天池水位上涨，多名游客和工作人员连续目睹“怪物”出没，甚至有照片流传，引发轰动。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">2002年</span>
+                    <div class="timeline-content">
+                        <h3>卫星影像分析</h3>
+                        <p>有学者分析卫星照片，发现天池底部有类似生物的巨大阴影，但此说法尚未得到官方确认。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evidence Section -->
+        <section id="evidence">
+            <div class="section-title">
+                <h2>目击证据与影像</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="evidence-grid">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/monster1/400/250" alt="天池怪兽目击影像" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">影像资料</span>
+                        <h3 class="card-title">1980年游客拍摄</h3>
+                        <p class="card-text">一名游客在天池边使用相机拍摄，胶卷冲洗后显示水中有一个类似长颈鹿的黑色物体在游动。</p>
+                        <a href="#" class="read-more">查看详情 &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/monster2/400/250" alt="天池怪兽目击报告" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">目击报告</span>
+                        <h3 class="card-title">2005年渔民描述</h3>
+                        <p class="card-text">当地渔民声称在夜间看到水面有强光，物体呈纺锤形，速度极快，像鱼雷一样在水下冲刺。</p>
+                        <a href="#" class="read-more">查看详情 &rarr;</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/monster3/400/250" alt="天池怪兽目击目击" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">目击目击</span>
+                        <h3 class="card-title">2009年科考队</h3>
+                        <p class="card-text">科考队员在考察时，通过望远镜观察到水面有巨大的圆形物体划过，随后迅速沉入水中。</p>
+                        <a href="#" class="read-more">查看详情 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Scientific View -->
+        <section id="science" class="scientific-view">
+            <div class="section-title">
+                <h2>科学界的解释</h2>
+                <div class="divider" style="margin: 0 auto; background-color: var(--primary-color);"></div>
+            </div>
+            <h3>关于“长白山怪兽”的多种假说</h3>
+            <p>虽然目击事件层出不穷，但地质学家和生物学家普遍认为，目前并没有确凿证据证明存在史前生物或外星生命。常见的解释主要集中在以下方面：</p>
+            <ul class="suggestion-list" style="margin-top: 1rem;">
+                <li><strong>大鱼说：</strong> 湖中可能生存着类似“大马哈鱼”或“白鲑”的大型鱼类，在光线折射下被误认为是怪物。</li>
+                <li><strong>水生动物说：</strong> 可能存在尚未被发现的物种，或者是某种水獭、野猪等大型动物在饮水或游泳。</li>
+                <li><strong>漂浮物说：</strong> 风吹来的浮木、水草团，或者是天池特有的火山气体气泡，在特定角度下会产生视觉错觉。</li>
+                <li><strong>光影折射说：</strong> 天池特殊的地理位置和天气条件容易产生海市蜃楼般的折射现象。</li>
+            </ul>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">天池怪兽到底是什么？</div>
+                <div class="faq-answer">
+                    <p>目前科学界尚无定论。虽然目击者描述各异，但主流观点认为这可能是自然现象或误认，而非神秘生物。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">为什么天池里会有生物？</div>
+                <div class="faq-answer">
+                    <p>天池是由火山口形成的湖泊，虽然环境恶劣，但深处可能存在微生物，且历史上曾有鱼类通过河流迁徙进入天池。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">去长白山能看到怪兽吗？</div>
+                <div class="faq-answer">
+                    <p>这完全取决于运气和天气。天池常年气候多变，且大部分时间游客无法登顶，目击怪兽的概率极低。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.6;">
+                    本站致力于收集、整理和传播关于长白山怪兽的各类目击资料与科学研究，为爱好者提供一个客观的交流平台。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>相关专题</h4>
+                <ul>
+                    <li><a href="#">尼斯湖水怪</a></li>
+                    <li><a href="#">喀纳斯湖水怪</a></li>
+                    <li><a href="#">中国未解之谜</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><a href="#">投稿与纠错</a></li>
+                    <li><a href="#">版权声明</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 长白山怪兽档案网. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
