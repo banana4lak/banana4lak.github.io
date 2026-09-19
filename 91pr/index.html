@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="91pron 新地址导航：提供91pron最新访问入口、安全稳定的在线阅读平台及使用指南，帮助用户快速找到正版资源。">
+    <meta name="keywords" content="91pron 新地址, 91pron, 漫画在线, 漫画阅读, 新域名">
+    <title>91pron 新地址 - 漫画在线阅读与资源导航</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --primary-hover: #d81b60;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.1s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(233, 30, 99, 0.05);
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        /* Content Section */
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        .section-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .comic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .comic-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .comic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 24px;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .address-list {
+            list-style: none;
+        }
+
+        .address-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .address-item:last-child {
+            border-bottom: none;
+        }
+
+        .domain-name {
+            font-size: 13px;
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #333;
+        }
+
+        .copy-btn {
+            font-size: 12px;
+            color: var(--primary-color);
+            cursor: pointer;
+            border: 1px solid var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .tips-list {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .tips-list li {
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .tips-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>91pron 新地址导航</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">使用帮助</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>91pron 新地址：畅享高清漫画阅读</h1>
+            <p>我们致力于为您提供最新、最稳定的 91pron 访问入口。支持多端同步，海量热门漫画免费在线阅读，高清画质，无广告打扰。</p>
+            <div class="cta-group">
+                <a href="#" class="btn btn-primary">立即访问新地址</a>
+                <a href="#" class="btn btn-outline">查看使用教程</a>
+            </div>
+        </section>
+
+        <div class="main-layout">
+            <!-- Main Content -->
+            <div class="content-area">
+                <section>
+                    <div class="section-title">
+                        <span>热门推荐</span>
+                        <a href="#">查看更多 &gt;</a>
+                    </div>
+                    <div class="comic-grid">
+                        <!-- Comic Card 1 -->
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/comic1/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">都市异能：觉醒</h3>
+                                <div class="card-meta">已更新至 120 话</div>
+                            </div>
+                        </article>
+                        <!-- Comic Card 2 -->
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/comic2/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">豪门恩怨：重生</h3>
+                                <div class="card-meta">已更新至 88 话</div>
+                            </div>
+                        </article>
+                        <!-- Comic Card 3 -->
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/comic3/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">奇幻冒险：龙之谷</h3>
+                                <div class="card-meta">已更新至 205 话</div>
+                            </div>
+                        </article>
+                        <!-- Comic Card 4 -->
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/comic4/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">职场励志：合伙人</h3>
+                                <div class="card-meta">已更新至 56 话</div>
+                            </div>
+                        </article>
+                        <!-- Comic Card 5 -->
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/comic5/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">历史战争：铁血</h3>
+                                <div class="card-meta">已更新至 300+ 话</div>
+                            </div>
+                        </article>
+                        <!-- Comic Card 6 -->
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/comic6/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">科幻未来：星际</h3>
+                                <div class="card-meta">已更新至 45 话</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section style="margin-top: 40px;">
+                    <div class="section-title">
+                        <span>最新更新</span>
+                        <a href="#">查看更多 &gt;</a>
+                    </div>
+                    <div class="comic-grid">
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/new1/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">甜蜜恋爱：恋爱模拟器</h3>
+                                <div class="card-meta">今日更新</div>
+                            </div>
+                        </article>
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/new2/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">悬疑推理：消失的证物</h3>
+                                <div class="card-meta">今日更新</div>
+                            </div>
+                        </article>
+                        <article class="comic-card">
+                            <img src="https://picsum.photos/seed/new3/300/450" alt="漫画封面" class="card-cover">
+                            <div class="card-info">
+                                <h3 class="card-title">搞笑日常：打工日记</h3>
+                                <div class="card-meta">今日更新</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">最新访问入口</h3>
+                    <ul class="address-list">
+                        <li class="address-item">
+                            <span class="domain-name">www.91pron.vip</span>
+                            <span class="copy-btn" onclick="copyText('www.91pron.vip')">复制</span>
+                        </li>
+                        <li class="address-item">
+                            <span class="domain-name">www.91pron.net</span>
+                            <span class="copy-btn" onclick="copyText('www.91pron.net')">复制</span>
+                        </li>
+                        <li class="address-item">
+                            <span class="domain-name">www.91pron.cc</span>
+                            <span class="copy-btn" onclick="copyText('www.91pron.cc')">复制</span>
+                        </li>
+                        <li class="address-item">
+                            <span class="domain-name">m.91pron.com</span>
+                            <span class="copy-btn" onclick="copyText('m.91pron.com')">复制</span>
+                        </li>
+                    </ul>
+                    <p style="font-size: 12px; color: #999; margin-top: 10px; text-align: center;">* 若无法访问，请尝试切换节点或使用手机端访问。</p>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">阅读提示</h3>
+                    <ul class="tips-list">
+                        <li>请勿在公共网络下登录个人账号。</li>
+                        <li>支持电脑、平板及手机多端阅读。</li>
+                        <li>建议使用 Chrome 或 Safari 浏览器。</li>
+                        <li>遇到加载问题请刷新页面。</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">用户协议</a>
+            </div>
+            <p class="copyright">
+                本站仅提供漫画资源导航服务，所有漫画内容版权归原作者所有。<br>
+                如果您喜欢本站，请将本站添加到浏览器收藏夹。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function copyText(text) {
+            // 创建临时输入框来复制文本
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                // 简单的用户反馈
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = '已复制';
+                btn.style.backgroundColor = '#4CAF50';
+                btn.style.color = 'white';
+                btn.style.borderColor = '#4CAF50';
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }, 2000);
+            } catch (err) {
+                console.error('无法复制', err);
+            }
+            document.body.removeChild(tempInput);
+        }
+    </script>
+</body>
+</html>
