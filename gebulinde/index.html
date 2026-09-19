@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哥布林的窑洞-奇幻冒险与生存指南</title>
+    <meta name="description" content="哥布林的窑洞：探索地下世界的生存法则、资源管理策略以及奇幻冒险故事。提供详尽的怪物图鉴、装备锻造指南及地下城探索技巧。">
+    <meta name="keywords" content="哥布林, 窑洞, 奇幻冒险, 地下城, 怪物图鉴, RPG游戏">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-gold: #d4af37;
+            --accent-green: #4caf50;
+            --accent-red: #e57373;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
+
+        .search-box {
+            display: flex;
+            background: #3d3d3d;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            color: var(--text-main);
+            outline: none;
+            width: 150px;
+            transition: width 0.3s;
+        }
+
+        .search-box input:focus {
+            width: 200px;
+        }
+
+        .search-box button {
+            background: var(--accent-gold);
+            border: none;
+            color: #1a1a1a;
+            padding: 0 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(to bottom, rgba(26,26,26,0.3), var(--bg-color)), url('https://picsum.photos/seed/dungeon/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--accent-gold);
+            border-radius: 8px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--accent-gold);
+            color: #1a1a1a;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            background: #f3c645;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+        }
+
+        .stat-card:hover {
+            border-bottom-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .view-all {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .card-image {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #444;
+            color: var(--text-main);
+        }
+
+        .mob-list li {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .mob-list li:last-child {
+            border-bottom: none;
+        }
+
+        .mob-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+        }
+
+        .mob-list a:hover {
+            color: var(--accent-gold);
+        }
+
+        .difficulty-badge {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            background: #444;
+            color: #fff;
+        }
+
+        .diff-easy { background: var(--accent-green); }
+        .diff-medium { background: var(--accent-gold); color: #000; }
+        .diff-hard { background: var(--accent-red); }
+
+        /* Survival Guide */
+        .guide-section {
+            background: linear-gradient(135deg, #2d2d2d 0%, #252525 100%);
+            padding: 3rem 0;
+            margin-bottom: 4rem;
+            border-top: 1px solid #444;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .guide-item {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .guide-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .guide-item h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .guide-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #383838;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            display: none;
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-gold);
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 3rem 0;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            margin: 0 0.5rem;
+            color: #888;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-box {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/>
+                </svg>
+                哥布林的窑洞 <span>Dungeon</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">怪物图鉴</a></li>
+                    <li><a href="#">装备锻造</a></li>
+                    <li><a href="#">生存指南</a></li>
+                    <li><a href="#">社区论坛</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索资源...">
+                <button>搜</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>深入地下世界</h1>
+                <p>欢迎来到哥布林的窑洞。这里记录了地下城中最危险的生物、最珍贵的资源以及冒险者必须掌握的生存法则。</p>
+                <div class="hero-buttons">
+                    <a href="#guide" class="btn">开始生存</a>
+                    <a href="#bestiary" class="btn btn-outline">查看图鉴</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Stats Section -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">128</span>
+                    <span class="stat-label">已知生物种类</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4500</span>
+                    <span class="stat-label">已记录资源点</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">危险等级区域</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">89%</span>
+                    <span class="stat-label">冒险者存活率</span>
+                </div>
+            </section>
+
+            <!-- Main Content -->
+            <div class="main-grid">
+                <!-- Left Column -->
+                <section class="content-area">
+                    <div class="section-header">
+                        <h2>最新冒险情报</h2>
+                        <a href="#" class="view-all">查看全部 &rarr;</a>
+                    </div>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/goblin1/800/400" alt="地下城入口" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">探险报告</span>
+                            <h3 class="card-title"><a href="#">深入第4层：黑暗精灵的陷阱</a></h3>
+                            <p class="card-excerpt">本篇报告详细记录了冒险队在第四层遭遇的隐形陷阱以及应对策略。建议携带高灵敏度魔法侦测道具，并保持三人以上编队行动。</p>
+                            <div class="card-meta">
+                                <span>作者: 独行客</span>
+                                <span>2023-10-24</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/goblin2/800/400" alt="稀有矿石" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">资源采集</span>
+                            <h3 class="card-title"><a href="#">地下城矿物分布图解</a></h3>
+                            <p class="card-excerpt">掌握矿脉分布是获得稀有装备的关键。本文整理了铁矿石、秘银以及传说中的龙骨的分布区域，附带了挖掘技巧。</p>
+                            <div class="card-meta">
+                                <span>作者: 地质学家</span>
+                                <span>2023-10-22</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/goblin3/800/400" alt="战斗技巧" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">战斗指南</span>
+                            <h3 class="card-title"><a href="#">针对哥布林集群的战术</a></h3>
+                            <p class="card-excerpt">面对成群结队的哥布林，正面硬刚往往会导致全军覆没。本文将介绍如何利用地形优势进行分割包围，以及远程法师的站位建议。</p>
+                            <div class="card-meta">
+                                <span>作者: 战术大师</span>
+                                <span>2023-10-20</span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Right Sidebar -->
+                <aside class="sidebar">
+                    <!-- Monster List Widget -->
+                    <div class="sidebar-widget" id="bestiary">
+                        <h3 class="widget-title">危险生物榜</h3>
+                        <ul class="mob-list">
+                            <li>
+                                <a href="#">
+                                    <span>巨型史莱姆</span>
+                                    <span class="difficulty-badge diff-medium">中等</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>食人魔</span>
+                                    <span class="difficulty-badge diff-hard">困难</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>哥布林首领</span>
+                                    <span class="difficulty-badge diff-medium">中等</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>暗影潜伏者</span>
+                                    <span class="difficulty-badge diff-hard">困难</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>地穴蜘蛛</span>
+                                    <span class="difficulty-badge diff-easy">简单</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Resource Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">热门资源</h3>
+                        <div style="margin-bottom: 1rem;">
+                            <a href="#" style="display:flex; gap:10px; align-items:center;">
+                                <img src="https://picsum.photos/seed/iron/50/50" style="border-radius:4px;" alt="">
+                                <div>
+                                    <div style="font-weight:bold;">秘银矿石</div>
+                                    <div style="font-size:0.8rem; color:#888;">稀有度: ★★★★</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" style="display:flex; gap:10px; align-items:center;">
+                                <img src="https://picsum.photos/seed/herb/50/50" style="border-radius:4px;" alt="">
+                                <div>
+                                    <div style="font-weight:bold;">抗毒草</div>
+                                    <div style="font-size:0.8rem; color:#888;">稀有度: ★★★</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Survival Guide Section -->
+            <section class="guide-section" id="guide">
+                <div class="container">
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <h2>地下城生存法则</h2>
+                    </div>
+                    <div class="guide-grid">
+                        <div class="guide-item">
+                            <div class="guide-icon">🔦</div>
+                            <h3>照明与视野</h3>
+                            <p>地下城常年不见天日，魔法火焰虽然明亮但消耗法力。建议携带提灯并定期检查燃料，避免陷入黑暗中的伏击。</p>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">🛡️</div>
+                            <h3>装备维护</h3>
+                            <p>潮湿和腐蚀是地下城的两大杀手。定期用油脂擦拭盔甲，特别是金属部件，可以有效防止生锈和断裂。</p>
+                        </div>
+                        <div class="guide-item">
+                            <div class="guide-icon">💊</div>
+                            <h3>健康监测</h3>
+                            <p>受伤后的感染在地下极难治疗。保持伤口清洁，随身携带治疗药膏和绷带，小伤不治可能演变成大麻烦。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-header" style="justify-content: center; border: none; padding: 0;">
+                    <h2>常见问题解答</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: 第一次进入地下城需要准备什么？</div>
+                    <div class="faq-answer">A: 建议准备基础武器（如铁剑或长弓）、一套耐用的轻型护甲、至少两天的食物、火把、绳索以及急救包。不要携带过多负重，灵活机动更重要。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 哥布林会使用魔法吗？</div>
+                    <div class="faq-answer">A: 极少数高阶哥布林（如巫妖）掌握魔法，但绝大多数哥布林依赖陷阱、毒药和数量优势。遇到会施法的敌人请优先使用反魔法护盾。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 窑洞深处有什么？</div>
+                    <div class="faq-answer">A: 据传深处埋藏着古代遗迹和守护兽，但也有传闻说那里是通往其他位面的入口。只有最勇敢的冒险者敢于挑战最底层。</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">隐私政策</a>
+                <a href="#">投稿指南</a>
+            </div>
+            <p>&copy; 2023 哥布林的窑洞 Dungeon. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #444;">本站内容仅供娱乐参考，请勿模仿危险行为。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
