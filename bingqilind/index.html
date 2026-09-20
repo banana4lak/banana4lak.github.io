@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冰淇淋DIY - 家庭自制冰淇淋的完整指南。提供多种口味配方、制作工具推荐、制作步骤详解及保存技巧，让你轻松在家享受美味健康的冰淇淋。">
+    <meta name="keywords" content="冰淇淋DIY,自制冰淇淋,冰淇淋配方,家庭冰淇淋,冰淇淋制作教程">
+    <title>冰淇淋DIY - 家庭自制冰淇淋的完整指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff9eb5;
+            --accent-color: #4ecdc4;
+            --text-dark: #2d3436;
+            --text-gray: #636e72;
+            --bg-light: #f7f1e3;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 107, 129, 0.1) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 20%);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #ff4757;
+            transform: translateY(-2px);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #fff;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            border: 1px solid #eee;
+        }
+
+        .tag.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        /* 常见问题区域 */
+        .faq-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-light);
+            padding: 25px;
+            border-radius: var(--radius);
+            transition: transform 0.3s;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .faq-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item h3::before {
+            content: 'Q';
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .faq-item p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* 制作步骤 */
+        .steps-section {
+            padding: 80px 0;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 0 5px rgba(255, 107, 129, 0.2);
+        }
+
+        .step-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .step-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* 工具推荐 */
+        .tools-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .tool-card {
+            border: 1px solid #eee;
+            border-radius: var(--radius);
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .tool-card:hover {
+            box-shadow: var(--shadow);
+            border-color: var(--secondary-color);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tool-card h4 {
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .tool-card p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        /* 底部 */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #636e72;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #636e72;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none; /* 移动端简化处理 */
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    🍦 <span>冰淇淋DIY</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#recipes">经典配方</a>
+                    <a href="#tools">必备工具</a>
+                    <a href="#guide">制作指南</a>
+                    <a href="#tips">保存技巧</a>
+                </div>
+                <a href="#guide" class="cta-btn">开始制作</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>在家轻松实现 <span>冰淇淋DIY</span></h1>
+                <p>无需昂贵的设备，只需简单的原料和几分钟的准备，即可享受丝滑浓郁的家庭自制冰淇淋。探索多种口味，定制属于你的甜蜜时刻。</p>
+                
+                <div class="hero-tags">
+                    <span class="tag active">低糖健康</span>
+                    <span class="tag">零添加</span>
+                    <span class="tag">快速冷冻</span>
+                    <span class="tag">创意口味</span>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/icecreamdiy/1200/600.jpg" alt="家庭自制冰淇淋成品展示" width="1200" height="600">
+                </div>
+            </div>
+        </section>
+
+        <!-- 制作步骤 -->
+        <section id="guide" class="steps-section">
+            <div class="container">
+                <h2 class="section-title">DIY冰淇淋三步走</h2>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>准备混合液</h3>
+                        <p>将牛奶、淡奶油与糖按比例混合，加热至微温（约60℃）以溶解糖分，加入香草精等调味料，冷却至室温。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>注入模具</h3>
+                        <p>将混合液倒入冰淇淋模具中，确保液面平整。轻轻震出气泡，盖上盖子或封上保鲜膜，放入冰箱冷冻层。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>等待凝固</h3>
+                        <p>根据温度不同，通常需要冷冻4-6小时。中途取出一次搅拌，可增加口感绵密度，完成即可享用。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>没有冰淇淋机可以DIY吗？</h3>
+                        <p>完全可以。可以使用密封性好的保鲜盒，每隔30分钟取出搅拌一次，模拟搅打过程，虽然稍繁琐，但效果依然不错。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>自制冰淇淋如何更健康？</h3>
+                        <p>建议减少白糖用量，使用代糖或天然蜂蜜。同时增加牛奶与淡奶油的比例，或加入香蕉泥、酸奶作为基底，增加膳食纤维和蛋白质。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>冷冻时间过长会影响口感吗？</h3>
+                        <p>是的。冰淇淋在冷冻室中存放时间过长，冰晶会变大，导致口感变得粗糙、颗粒感强。建议在冷冻4-7天内食用完毕。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>如何防止冰淇淋产生冰渣？</h3>
+                        <p>关键在于搅拌的频率和冷冻的温度。频繁搅拌可以打断大冰晶的形成，同时保持冷冻层温度稳定（-18℃以下）。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>适合家庭DIY的经典口味有哪些？</h3>
+                        <p>香草味是入门首选，浓郁易操作。巧克力、抹茶和草莓口味也非常受欢迎。水果口味适合加入新鲜果肉增加风味。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>制作失败怎么办？</h3>
+                        <p>如果味道太淡，可以增加糖量；如果太硬，下次减少奶油比例；如果分层明显，检查密封性并确保搅拌均匀。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工具推荐 -->
+        <section id="tools" class="tools-section">
+            <div class="container">
+                <h2 class="section-title">推荐工具</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <span class="tool-icon">🥄</span>
+                        <h4>硅胶冰淇淋模具</h4>
+                        <p>耐高温，易脱模，形状多样，是制作冰淇淋DIY的基础工具。</p>
+                    </div>
+                    <div class="tool-card">
+                        <span class="tool-icon">🥢</span>
+                        <h4>不锈钢搅拌棒</h4>
+                        <p>用于在冷冻过程中搅拌混合液，防止冰晶过大，提升口感。</p>
+                    </div>
+                    <div class="tool-card">
+                        <span class="tool-icon">🥛</span>
+                        <h4>打蛋器/电动搅拌器</h4>
+                        <p>快速打发淡奶油，使空气充分融入，制作出口感更蓬松的冰淇淋。</p>
+                    </div>
+                    <div class="tool-card">
+                        <span class="tool-icon">🧊</span>
+                        <h4>食品级密封盒</h4>
+                        <p>用于无机器制作的搅拌法，确保冷冻过程中气味不串味。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">
+                        🍦 <span>冰淇淋DIY</span>
+                    </div>
+                    <p style="color: #b2bec3; font-size: 0.9rem;">
+                        专注于分享家庭自制冰淇淋的技巧、配方与经验，让美味触手可及。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#recipes">经典配方大全</a></li>
+                        <li><a href="#guide">新手入门指南</a></li>
+                        <li><a href="#tools">工具选购建议</a></li>
+                        <li><a href="#tips">保存与冷藏</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">水果冰淇淋</a></li>
+                        <li><a href="#">巧克力风味</a></li>
+                        <li><a href="#">无糖低卡</a></li>
+                        <li><a href="#">儿童专属</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 冰淇淋DIY指南. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
